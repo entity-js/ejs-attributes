@@ -48,7 +48,10 @@ describe('ejs/attributes', function () {
 
     test.string(
       attributes(attrs)
-    ).is('id="hello" name="world" data-attr="{\\"foo\\":\\"bar\\",\\"hello\\":\\"world\\"}"');
+    ).is(
+      'id="hello" name="world" ' +
+      'data-attr="{\\"foo\\":\\"bar\\",\\"hello\\":\\"world\\"}"'
+    );
 
   });
 
