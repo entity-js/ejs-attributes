@@ -39,4 +39,17 @@ describe('ejs/attributes', function () {
 
   });
 
+  it('shouldJSONifyObjects', function () {
+
+    var attrs = {id: 'hello', name: 'world', 'data-attr': {
+      foo: 'bar',
+      hello: 'world'
+    }};
+
+    test.string(
+      attributes(attrs)
+    ).is('id="hello" name="world" data-attr="{\\"foo\\":\\"bar\\",\\"hello\\":\\"world\\"}"');
+
+  });
+
 });
